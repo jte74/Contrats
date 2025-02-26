@@ -1,0 +1,365 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Reset des styles par défaut */
+.App {
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  background-color: #041526;
+}
+
+/* Navigation principale */
+.nav {
+  padding: 2rem;
+  background-color: #041526;
+  box-shadow: 0 8px 24px rgba(4, 21, 38, 0.2);
+}
+
+.nav__content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav__link {
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #dbe4e9;
+  background-color: #0f2f4a;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(4, 21, 38, 0.2);
+}
+
+.nav__link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(219, 228, 233, 0.2);
+}
+
+.nav__link--active {
+  color: #041526 !important;
+  background-color: #dbe4e9 !important;
+  box-shadow: 0 4px 12px rgba(219, 228, 233, 0.3) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav__content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .nav__link {
+    text-align: center;
+    padding: 0.75rem !important;
+  }
+}
+
+/* Conserver les animations existantes si besoin */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Ajouts dans App.css */
+
+.home-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: calc(100vh - 120px);
+}
+
+.home-logo {
+  width: 250px;
+  display: block;
+  margin: 2rem auto;
+  filter: drop-shadow(0 4px 12px rgba(219, 228, 233, 0.3));
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(4, 21, 38, 0.3);
+  background: #041526;
+}
+
+.presentation-video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: contain;
+  display: block;
+}
+
+.presentation-text {
+  text-align: center;
+  color: #dbe4e9;
+  margin: 3rem auto;
+  max-width: 800px;
+  padding: 2rem;
+  background: rgba(15, 47, 74, 0.6);
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+}
+
+.presentation-text h2 {
+  color: #dbe4e9;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.presentation-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stat-item {
+  background: rgba(219, 228, 233, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(219, 228, 233, 0.2);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #dbe4e9;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #9ab3c5;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 1rem;
+  }
+
+  .home-logo {
+    width: 200px;
+  }
+
+  .presentation-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .presentation-text p {
+    font-size: 1rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-wrapper {
+    border-radius: 8px;
+  }
+
+  .presentation-text {
+    padding: 1.5rem;
+    margin: 2rem auto;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    margin: 2rem auto;
+  }
+}
+
+.video-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(4, 21, 38, 0.9));
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-wrapper:hover .video-controls {
+  opacity: 1;
+}
+
+.progress-bar {
+  flex-grow: 1;
+  height: 4px;
+  background: rgba(219, 228, 233, 0.3);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #dbe4e9;
+  border-radius: 2px;
+  transition: width 0.1s linear;
+}
+
+.control-btn {
+  background: none;
+  border: none;
+  color: #dbe4e9;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.control-btn:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.control-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .video-controls {
+    opacity: 1; /* Toujours visible sur mobile */
+    padding: 0.8rem;
+  }
+  
+  .control-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+.audio-warning {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(219, 228, 233, 0.9);
+  color: #041526;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+}
+
+.audio-warning button {
+  background: #0f2f4a;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.play-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(4, 21, 38, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  border-radius: 15px;
+}
+
+.play-overlay button {
+  background: #dbe4e9;
+  color: #041526;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.play-overlay button:hover {
+  transform: scale(1.05);
+  background: #ffffff;
+}
+
+
