@@ -12,8 +12,8 @@ const ClassementTable = () => {
             try {
                 // Récupération des deux classements en parallèle
                 const [individuResponse, equipeResponse] = await Promise.all([
-                    axios.get("https://localhost:7284/Classement/GetClassement"),
-                    axios.get("https://localhost:7284/Classement/GetClassementEquipe")
+                    axios.get("https://classement-api.onrender.com/Classement/GetClassement"),
+                    axios.get("https://classement-api.onrender.com/Classement/GetClassementEquipe")
                 ]);
 
                 // Traitement classement individuel
