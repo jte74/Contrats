@@ -1,62 +1,3 @@
-// import React from 'react';
-// import logo from './assets/BlueDistrib.jpg';
-// import './App.css';
-// import video from './assets/DeltaVideo.mp4';
-
-// const HomePage = () => {
-//   return (
-//     <div className="home-container">
-//       {/* Logo */}
-//       <img 
-//         src={logo} 
-//         alt="Logo Delta Concept" 
-//         className="home-logo"
-//       />
-
-//       {/* Conteneur Vidéo */}
-//       <div className="video-wrapper">
-//         <video 
-//           autoPlay
-//           loop
-//           muted
-//           playsInline
-//           className="presentation-video"
-//           poster="/images/video-poster.jpg"
-//         >
-//           <source src={video} type="video/mp4" />
-//           Votre navigateur ne supporte pas les vidéos HTML5.
-//         </video>
-//       </div>
-
-//       {/* Texte de présentation */}
-//       <div className="presentation-text">
-//         <h2>Concours Opération Excellence 2024</h2>
-//         <p>
-//           Plongez au cœur de la performance opérationnelle ! Ce concours récompense 
-//           les meilleures initiatives et les équipes les plus engagées dans 
-//           l'amélioration continue de nos processus.
-//         </p>
-//         <div className="stats-grid">
-//           <div className="stat-item">
-//             <div className="stat-number">15</div>
-//             <div className="stat-label">Équipes</div>
-//           </div>
-//           <div className="stat-item">
-//             <div className="stat-number">127</div>
-//             <div className="stat-label">Participants</div>
-//           </div>
-//           <div className="stat-item">
-//             <div className="stat-number">4</div>
-//             <div className="stat-label">Mois</div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default HomePage;
-
 import React, { useState, useRef } from 'react';
 import logo from './assets/BlueDistrib.jpg';
 import './App.css';
@@ -144,7 +85,7 @@ const HomePage = () => {
       </div>
 
       <div className="presentation-text">
-        <h2>Concours Opération Excellence 2024</h2>
+        <h2>Concours Opération Excellence 2025</h2>
         <p>
           Plongez au cœur de la performance opérationnelle ! Ce concours récompense 
           les meilleures initiatives et les équipes les plus engagées dans 
@@ -152,11 +93,11 @@ const HomePage = () => {
         </p>
         <div className="stats-grid">
           <div className="stat-item">
-            <div className="stat-number">15</div>
+            <div className="stat-number">6</div>
             <div className="stat-label">Équipes</div>
           </div>
           <div className="stat-item">
-            <div className="stat-number">127</div>
+            <div className="stat-number">24</div>
             <div className="stat-label">Participants</div>
           </div>
           <div className="stat-item">
