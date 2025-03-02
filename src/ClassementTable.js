@@ -6,6 +6,7 @@ import logo from './assets/BlueDistrib.jpg';
 const ClassementTable = () => {
     const [individuData, setIndividuData] = useState([]);
     const [equipeData, setEquipeData] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -26,8 +27,10 @@ const ClassementTable = () => {
                 const rankedEquipe = addRanking(sortedEquipe);
                 setEquipeData(rankedEquipe);
 
+                setIsLoading(false);
             } catch (error) {
                 console.error("Erreur lors de la récupération des données :", error);
+                setIsLoading(false);
             }
         };
 
@@ -124,7 +127,16 @@ const ClassementTable = () => {
                 />
             </div>
     
-            {/* Contenu principal avec les deux tableaux */}
+            {isLoading ? (
+            <div style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                minHeight: '50vh'
+            }}>
+                <div className="spinner"></div>
+            </div>
+        ) : (
             <div style={{ 
                 maxWidth: "1400px", 
                 margin: "0 auto",
@@ -143,7 +155,7 @@ const ClassementTable = () => {
                     colonnes={['Position', 'Équipe', 'Points']}
                     donnees={equipeData}
                 />
-            </div>
+            </div>)};
         </div>
     );
 };
