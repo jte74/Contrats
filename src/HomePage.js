@@ -97,12 +97,12 @@ const HomePage = () => {
             <div className="stat-label">Équipes</div>
           </div>
           <div className="stat-item">
-            <div className="stat-number">24</div>
+            <div className="stat-number">36</div>
             <div className="stat-label">Participants</div>
           </div>
           <div className="stat-item">
-            <div className="stat-number">4</div>
-            <div className="stat-label">Mois</div>
+            <div className="stat-number">100</div>
+            <div className="stat-label">Jours</div>
           </div>
         </div>
       </div>
